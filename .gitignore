@@ -1,0 +1,67 @@
+## ---------- Build output ----------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Ll]og/
+[Ll]ogs/
+x64/
+x86/
+build/
+publish/
+out/
+
+## ---------- Visual Studio ----------
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.rsuser
+*.DotSettings.user
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+## ---------- VS Code / JetBrains Rider ----------
+.vscode/
+.idea/
+*.sln.iml
+
+## ---------- NuGet ----------
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+.nuget/
+
+## ---------- Test results & coverage ----------
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+coverage*.json
+coverage*.xml
+*.coverage
+*.coveragexml
+TestResults/
+
+## ---------- Entity Framework ----------
+# Uncomment only if you do NOT want to commit migrations
+# Migrations/
+
+## ---------- Secrets & local config ----------
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+*.pfx
+*.key
+.env
+.env.*
+
+## ---------- Databases (local files) ----------
+*.mdf
+*.ldf
+*.ndf
+*.db
+*.sqlite
