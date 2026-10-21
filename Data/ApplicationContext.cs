@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ef_task.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ef_task.Data
@@ -14,5 +15,10 @@ namespace ef_task.Data
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=depi_ef_task;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
             base.OnConfiguring(optionsBuilder);
         }
+
+        public DbSet<Employee> employees { get; set; }
+        public DbSet<Department> departments { get; set; }
+        public DbSet<Projects> projects { get; set; }
+        public DbSet<Dependent> dependents { get; set; }
     }
 }
