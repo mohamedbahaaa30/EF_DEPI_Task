@@ -15,6 +15,11 @@ namespace ef_task.Data
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=depi_ef_task;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
             base.OnConfiguring(optionsBuilder);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationContext).Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
 
         public DbSet<Employee> employees { get; set; }
         public DbSet<Department> departments { get; set; }

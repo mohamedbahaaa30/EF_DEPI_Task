@@ -12,17 +12,17 @@ namespace ef_task.Models.ModelsConfiguration
     {
         public void Configure(EntityTypeBuilder<Department> builder)
         {
-            //1:M with employee
-            builder.HasMany(d => d.employees)
-                .WithOne(e => e.Department)
-                .HasForeignKey(e => e.DeptID)
-                .OnDelete(DeleteBehavior.Cascade);
+            ////1:M with employee
+            //builder.HasMany(d => d.employees)
+            //    .WithOne(e => e.Department)
+            //    .HasForeignKey(e => e.DeptID)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
-            //1:1 with employee
-            builder.HasOne(d => d.employee)
-                .WithOne(e => e.ManageDepartment)
-                .HasForeignKey<Department>(d => d.EmployeeId)
-                .OnDelete(DeleteBehavior.Cascade);
+            ////1:1 with employee
+            //builder.HasOne(d => d.employee)
+            //    .WithOne(e => e.ManageDepartment)
+            //    .HasForeignKey<Department>(d => d.EmployeeId)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
             //1:M with projects
             builder.HasMany(d => d.projects)

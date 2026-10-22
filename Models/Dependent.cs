@@ -22,7 +22,6 @@ namespace ef_task.Models
 
         [Required]
         public int EmployeeId { get; set; }
-        [ForeignKey(nameof(EmployeeId))]
         public Employee Employee { get; set; }
 
     }
